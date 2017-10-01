@@ -26,4 +26,27 @@
     offset: 54
   });
 
+<<<<<<< HEAD
 })(jQuery); // End of use strict
+
+$(window).scroll(function() {
+    if ($(".navbar").offset().top > 140) {
+        $(".navbar-fixed-top").addClass("nav-shrink");
+    } else {
+        $(".navbar-fixed-top").removeClass("nav-shrink");
+    }
+});
+
+
+$(function() {
+    $(document).on('click', 'a.page-scroll', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+=======
+})(jQuery); // End of use strict
+>>>>>>> 6ffbd0835f9fcc8afaec6e396837a548544a2aba
